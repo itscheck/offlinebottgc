@@ -7,7 +7,7 @@ import nest_asyncio
 nest_asyncio.apply()
 
 TOKEN = "8108034371:AAHtup29JJ59vyMfhAzhYLPiDN5VkcyETAw"
-ADMIN_ID = "804223902"
+ADMIN_ID = 804223902
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
