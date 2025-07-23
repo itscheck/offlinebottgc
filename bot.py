@@ -7,7 +7,7 @@ import nest_asyncio
 nest_asyncio.apply()
 
 TOKEN = "8108034371:AAHtup29JJ59vyMfhAzhYLPiDN5VkcyETAw"
-ADMIN_ID = 804223902  # ✅ целое число, не строка
+ADMIN_ID = "804223902"
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -40,4 +40,4 @@ if __name__ == '__main__':
     app.add_handler(CommandHandler("start", start))
     app.add_handler(MessageHandler(filters.PHOTO, handle_photo))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text))
-    app.run_polling() 
+    app.run_polling()     
