@@ -3,12 +3,11 @@ import logging
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 import nest_asyncio
-import os
 
 nest_asyncio.apply()
 
-TOKEN = os.getenv("8108034371:AAHtup29JJ59vyMfhAzhYLPiDN5VkcyETAw")
-ADMIN_ID = int(os.getenv("804223902"))
+TOKEN = "8108034371:AAHtup29JJ59vyMfhAzhYLPiDN5VkcyETAw"
+ADMIN_ID = 804223902  # ✅ целое число, не строка
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -40,5 +39,4 @@ if __name__ == '__main__':
     app = ApplicationBuilder().token(TOKEN).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(MessageHandler(filters.PHOTO, handle_photo))
-    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text))
-    app.run_polling() 
+    app.add_handler(MessageHandler(filters._
